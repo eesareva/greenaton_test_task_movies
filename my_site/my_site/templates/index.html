@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>Гринатом</title>
+</head>
+<body>
+    <!-- <form method="post" action="result/"> -->
+
+    <div class="feedback__conteiner">
+        <h2>Введите ваш отзыв</h2>
+        <form class="feedback__form" method="post" action="{% url 'result_view' %}">
+        
+            {% csrf_token %}
+            <textarea name="feedback"></textarea>
+            <button class="feedback__formButton" type="submit">Predict</button>
+        </form>
+    
+        {% if feedback_status %}
+        <!-- <h2>Results</h2> -->
+        <p class="feedback__resultStatus">{{ feedback_status }} с предполагаемой оценкой</p>
+        <p class="feedback__resultRating">{{ rating }}</p>
+        {% endif %}
+    </div>
+    
+</body>
+</html>

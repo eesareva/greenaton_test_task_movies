@@ -1,0 +1,42 @@
+body {
+    /* background: linear-gradient(90deg, #f598a8, #f6edb2); */
+    background-image: url('/static/cinima_pict.jpg');
+    background-size: cover;
+    background-repeat: no-repeat; 
+}
+.feedback__conteiner {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 99px;
+}
+.feedback__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.feedback__form textarea {
+    background-color: #eee;
+    width: 350px;
+    height: 100px;
+}
+.feedback__formButton {
+    background: linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db);
+    width: 100px;
+    height: 30px;
+    margin: 20px;
+    border-radius: 15px;
+
+    border: none;
+}
+.feedback__resultStatus {
+    font-size: 20px;
+}
+.feedback__resultRating {
+    font-size: 56px;
+    font-family: arial;
+    font-weight: bold;
+    color: #ff002b;
+    margin: 0;
+}
